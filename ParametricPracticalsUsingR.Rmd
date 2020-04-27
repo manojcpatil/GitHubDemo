@@ -1,0 +1,236 @@
+---
+title: "Parametric Inference Practicals Using R"
+author: "Manoj C Patil"
+date: "27 April 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Parametric Inference
+====================
+
+Sampling distribution of Statistics/estimator 
+----------------------------------------------
+
+1.  Based on the simulated data from$N(\mu =10,\sigma^{2} =1)$.
+    Demonstrate the distribution and itâ???Ts descriptive statistics of
+    following statistics
+
+    1. $T_{1} =\overline{X}_{n}$
+
+    2. $T_{2} =S_{n}^{2}$ where
+       $S_{n}^{2} =\frac{1}{n} \sum_{i=1}^{n}\left(X_{i} -\overline{X}\right)^{2}$
+
+2.  Demonstrate the distribution and its descriptive statistics of
+    following statistics which is based on the simulated data
+    from$Poisson(\lambda =15)$
+
+    1. $T_{1} =\overline{X}_{n}$
+
+    2. $T_{2} =S_{n}^{2}$where
+       $S_{n}^{2} =\frac{1}{n} \sum_{i=1}^{n}\left(X_{i} -\overline{X}\right)^{2}$
+
+3.  Based on the simulated data from$U(0,\theta =10)$.Demonstrate the
+    distribution and its descriptive statistics of estimator.
+
+    1. $T_{1} =2\overline{X}_{n}$
+
+    2. $T_{2} =X_{(n)}$
+
+4.  Based on the simulated data
+    from$Gamma(\alpha =8,\beta =10)$.Demonstrate the distribution and
+    its descriptive statistics of estimator
+   $T_{1} =\tilde{\alpha }=\frac{m_{1}^{2} }{m_{2} -m_{1}^{2} }$,$T_{21} =\tilde{\beta }=\frac{m_{2} -m_{1}^{2} }{m_{1} }$where
+   $m_{1} =E(X)=\overline{X}$and
+   $m_{2} =E(X^{2} )=\frac{1}{n} \sum_{i=1}^{n}X_{i}^{2}$
+
+<span>Estimation by Method of Moments</span>
+--------------------------------------------
+
+1.  Generate a random sample of size$n=100$ from
+   $Bino\left(n=6,p=0.86\right)$.\
+    Obtain method of moment estimates of$n$ and$p$ based on your
+    sample.
+
+2.  Generate random sample of size$n=100$ from Gamma distribution, with
+    pdf is given by
+   $$f(x,\alpha ,\beta )=\left\{\begin{array}{c} {\begin{array}{l} {\frac{1}{\overline{\alpha }\beta ^{\alpha } } x^{\alpha -1} e^{-\frac{x}{\beta } } ,x,\alpha ,\beta >0} \\ {} \end{array}} \\ {0, O.W.} \end{array}\right.$$
+    Take$\alpha =7 and \beta =4$ Obtain method of moment estimates of
+   $\alpha  and \beta$ based on your sample.
+
+3.  Consider a random sample of size$n=20$ given below from Beta
+    distribution of first kind with pdf is
+   $$f(x,a,b)=\left\{\begin{array}{ll} \frac{1}{\beta \left(a,b\right)} x^{a-1} \left(1-x\right)^{b-1}, |	 0<x<1 \\ 0, |	 O.W.\end{array}\right.$$
+    0.133904, 0.224011, 0.062282, 0.122690, 0.051213, 0.620577,
+    0.000650, 0.271087, 0.827109, 0.929479, 0.561905, 0.160865,
+    0.362565, 0.001039, 0.883135, 0.393477, 0.990179, 0.045737,
+    0.243155, 0.080471 Obtain estimates of$a,b$ based on your sample
+    using method of moments.
+
+4.  Generate a random sample of size$n=20$ from truncated Poisson
+    distribution, which is truncated at point zero and obtained method
+    of moment estimates of parameter$\theta$ based on your sample.\
+
+<span>Plotting Likelihood Function</span>
+-----------------------------------------
+
+1.  Generate a random sample of size$n=50$ from
+    *Poisson*$\left(\lambda =5\right)$distribution. Plot a likelihood
+    function against the different values of$\lambda$ and check
+    whether likelihood function attains maxima at
+    i)$\lambda =\overline{X}$(sample mean) ii)$\lambda =5$\
+
+2.  Generate a random sample of size$n=50$ from
+    *Bernoulli*$\left(P=0.8\right)$ distribution. Plot a likelihood
+    function against the different values of$P$ and check whether
+    likelihood function attains maxima at i)$P=\overline{X}$(sample
+    mean) ii)$P=0.8$\
+
+3.  Generate a random sample of size$n=20$ from
+    *Normal*$\left(\mu =10,\sigma ^{2} =1\right)$distribution. Plot a
+    likelihood function for different values of$\mu$ when$\sigma =1$
+    is known and check whether likelihood function attains maxima at
+    i)$\mu =\overline{X}$(sample mean) ii)$\mu =10$
+
+4.  Draw a random of size$n=10$ from *Exponential *distribution with
+    mean*$\theta$.*Plot a likelihood function and check whether
+    likelihood function attains maxima at i)$\theta =\overline{X}$ ii)
+   $\theta =\overline{X}-0.5$
+
+5.  Consider a random sample of size$n=10$ from
+   $U\left(0,\theta \right)$ distribution. 2.06874 5.82498 2.65698
+    3.58650 2.78196 1.36005 4.49083 5.74037 3.41361 1.36519 Plot a
+    likelihood function and check whether likelihood function attains
+    maxima at i)$\theta =2\overline{X}$ ii)
+   $\theta =X_{\left(n\right)}$\
+
+<span>Unbiased estimator and MLE of probabilities</span>
+--------------------------------------------------------
+
+1.  Take a random sample of size *m*=1000 from$B(n=6,p=0.45)$. Obtain
+    the unbiased estimator and maximum likelihood estimator of the
+    following.
+
+2. $P(X=i),i=0,1,2,3,4,5,6$. Plot estimated probability mass function
+    (pmf) and exact probability mass function (pmf) using graph.
+
+    1. $P(X\le b)\, \, where\, \, \, b=3$
+
+    2. $p(a<X)\, \, \, \, where\, \, a=4$
+
+    3. $p(a<X<b)\, \, \, where\, \, b=5\, \, and\, \, a=2$
+
+3.  Consider an experiment of throwing 2 dice simultaneously. Simulate
+    this experiment 1000 times. Based on this simulation estimate the
+    following probabilities of events
+
+    1. $A=\left\{X+Y\le 7\right\}$
+
+    2. $B=\left\{X=Y\right\}$
+
+    Where X: Outcome from first dice. Y: Outcome from second dice.
+
+<span>Unbiased estimator </span>
+--------------------------------
+
+1.  Demonstrate the distribution of following statistics which is
+    function of random sample from$Poisson(\lambda =6)$
+
+    1. $T_{1} =\overline{X}$
+
+    2. $T_{2} =S^{2}$
+
+    Conclude that which one of the statistics is unbiased for
+    parameter$\lambda$. Also compare both the statistics in terms of
+    variance and suggest good one.
+
+2.  Demonstrate the distribution of statistics which is based on random
+    sample take from$B(n=7,p=0.45)$.Check$T_{1} =\overline{X}/n$ is
+    unbiased or not.
+
+<span>Plotting power function</span>
+------------------------------------
+
+1.  It is desired to test$H_{0} :\mu =10$ versus$H_{1} :\mu >10$on the
+    basis of random sample of size$n=25$ from the normal population
+    with unknown mean and variance$\sigma ^{2} =4$.If the probability
+    of type-I error is to be$\alpha =0.025$ and the test function used
+    is,
+   $$\phi (x)=\left\{\begin{array}{c} {1\, \, \, \, \, \, \, \, \, if\overline{x}>c} \\ {0\, \, \, \, \, \, \, \, \, \, \, \, \, \, o.w.} \end{array}\right.$$
+    Where$\underline{X}=(X_{1} ,X_{2} ,...,X_{25} )$ denote the random
+    sample.
+
+    1.  Find the value of c.
+
+    2.  Find$\beta _{\phi } (\mu )$, Power function for
+       $\mu =10,10.5,11,11.5,12,12.5,13,13.5,14,14.5,15$+
+
+    3.  Plot the curve$\mu$ versus$\beta _{\phi } (\mu )$.
+
+2.  Suppose we want to test$H_{0} :\theta =1$ versus$H_{1} :\theta >1$
+    based on one observation from Poisson distribution with mean
+   $\theta$, Use the test function
+   $$\phi (x)=\left\{\begin{array}{c} {1\, \, \, \, \, \, \, \, \, \, \, \, \, if\, \, x>2} \\ {0.8\, \, \, \, \, \, \, \, if\, \, x=2} \\ {0\, \, \, \, \, \, \, \, \, \, \, if\, \, x<2} \end{array}\right.$$
+    Find the power function$\beta _{\phi } (\theta )=E(\phi (x))$and
+    plot the$\theta$ versus$\beta _{\phi } (\theta )$
+
+<span>Most Powerful Test </span>
+--------------------------------
+
+1.  Develop MP test for testing$H_{0} :\lambda =\lambda _{0}$
+    versus$H_{0} :\lambda =\lambda _{1} \, \, (\lambda _{1} >\lambda _{0} )$based
+    on a random sample of size$n=30$ from a
+    Poisson$\left(\lambda \right)$ with$\alpha =0.05$.Find Power of
+    your test. Generate a random sample of size$n=30$ from
+    Poisson$\left(\lambda \right)$ with$\lambda =2$ and based on this
+    sample give your decision about acceptance or rejection of$H_{0}$
+    for testing$H_{0} :\lambda =2$ versus$H_{0} :\lambda =4$ with
+   $\alpha =0.05$using test given by you.\
+
+2.  Develop MP test for testing$H_{0} :P=P_{0}$
+    versus$H_{0} :P=P_{1} \, \, (P_{1} >P_{0} )$based on a random sample
+    of size$n=25$ from a Bernoulli$\left(P\right)$ with
+   $\alpha =0.1$.Find Power of your test. A random sample of size
+   $n=25$from Bernoulli$\left(P\right)$ are given and based on this
+    sample give your decision about acceptance or rejection of$H_{0}$
+    for testing$H_{0} :P=0.5$ versus$H_{0} :P=0.7$ with$\alpha =0.1$
+    using test given by you. 1 0 1 0 0 0 0 0 0 1 0 0 1 1 0 1 1 0 0 0 1 1
+    0 0 1\
+
+Uniformly Most Powerful Test
+----------------------------
+
+1.  Develop UMP test for testing$H_{0} :\theta =4$ versus
+   $H_{1} :\theta >4\, \, \, \, \left(\theta _{1} >\theta _{0} \right)$
+    based on a random sample of size$n=10$ from a
+   $N\left(\theta ,1\right)$ with$\alpha =0.05$. Consider a sample data
+    4.78, 4.49, 4.20, 3.93, 5.12, 3.92, 2.57, 4.08, 5.38, 2.97 and base
+    on a sample give your decision about acceptance or rejection of
+   $H_{0}$ using test given by you. Find power of the test given by
+    you if$\theta =4.5$.
+
+2.  Let$X_{1} ,X_{2} ,X_{3} ...,X_{25}$ be a random sample of size 25
+    from$Binomial(5,p)$ distribution.
+
+    1.  Obtain UMP test of size$\alpha =0.04$ for testing
+       $H_{0} :p=0.4$ versus$H_{1} :p>0.4$
+
+    2.  Obtain power of the test.
+
+    3.  For the following sample data what is your decision about the
+        acceptance or rejection of$H_{0}$ 3, 2, 4, 2, 1, 2, 3, 1, 1,
+        4, 3, 5, 2, 4, 3, 1, 1, 2, 2, 3, 2, 4, 2, 2, 0
+
+3.  A sample of size$n=5$ is drawn from distribution with pdf is given
+    below.
+   $$f(x,\theta )=\left\{\begin{array}{c} {\theta \, \, e^{-x\theta } ,\, \, \, \, \, x>0,\theta >0} \\ {0\, \, \, \, \, \, \, \, \, \, \, ow} \end{array}\right.$$
+    Develop UMP test for testing$H_{0} :\theta =1$ versus
+   $H_{0} :\theta >1\, \, \, \, \, (\theta _{1} >\theta _{0} )$ based
+    on a random sample of size$n=5$ from$Exp(\theta )$ with
+   $\alpha =0.1$ Consider a sample data 0.01100, 0.42132, 0.03996,
+    1.32345, 0.66958 and based on this sample give your decision about
+    acceptance or rejection of$H_{0}$ using test given by you. Find
+    the power of the test given by you if$\theta =1.75$
